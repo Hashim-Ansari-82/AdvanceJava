@@ -5,14 +5,18 @@ import java.sql.DriverManager;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.sql.SQLException;
+import java.util.Scanner;
 
 public class FetchOperation {
 	 public static void main(String[] args) throws SQLException {
 			
 		 String url="jdbc:mysql://localhost:3306/jdbc_db",pass="root",username="root";
+		 Scanner sc=new Scanner(System.in);
+		 System.out.println("Enter table name");
+		 String tableName=sc.nextLine();
 		 
 		 Connection con = DriverManager.getConnection(url,username,pass);
-		 String fetch="SELECT * FROM DB";
+		 String fetch="SELECT * FROM "+tableName;
 		 PreparedStatement ps = con.prepareStatement(fetch);//?,?,?
 		 
 		 ResultSet rs = ps.executeQuery();
@@ -27,5 +31,6 @@ public class FetchOperation {
 			
 		 }
 		 con.close();
+		 sc.close();
 	 }
 }

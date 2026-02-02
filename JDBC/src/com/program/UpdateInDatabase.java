@@ -12,12 +12,15 @@ public class UpdateInDatabase {
 	public static void main(String[] args) throws ClassNotFoundException, SQLException, IOException {
 		
 		BufferedReader br=new BufferedReader(new InputStreamReader(System.in));
+		System.out.println("<----------- Enter Database Name ------>");
+		String database=br.readLine();
 		System.out.println("<---------- Enter email ---------->");
-		String email=br.readLine();System.out.println("<---------- Enter  id---------->");
+		String email=br.readLine();
+		System.out.println("<---------- Enter  id---------->");
 		int id=Integer.parseInt(br.readLine());
 		Class.forName("com.mysql.cj.jdbc.Driver");
 		 
-		String url="jdbc:mysql://localhost:3306/jdbc_db",pass="root",username="root";
+		String url="jdbc:mysql://localhost:3306/"+database,pass="root",username="root";
 		
 		Connection con = DriverManager.getConnection(url,username,pass);
 		PreparedStatement statement = con.prepareStatement("update db set email=? where id=?"); 

@@ -6,18 +6,20 @@ import java.sql.Connection;
 import java.sql.DriverManager;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
-import java.sql.SQLException; 
 import java.util.Scanner;
 
 public class JDBCCrudOperation {
 
 	private static String url = "jdbc:mysql://localhost:3306/", pass = "root", username = "root";
-	private static String url1 = "jdbc:mysql://localhost:3306/Department";
-	private static String tableName="Detail",dbname="Department";
-
+	private static String url1 = "jdbc:mysql://localhost:3306/department";
+	
+	static BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
+	
              	/* Create Database */
-
-	public static void createDatabase() throws SQLException {
+ 
+	public static void createDatabase() throws Exception {
+		System.out.println("Enter Database Name");
+		String dbname=br.readLine();
 		String createDB = "CREATE DATABASE "+dbname;
 		Connection con = DriverManager.getConnection(url, username, pass);
 		PreparedStatement ps = con.prepareStatement(createDB);
@@ -30,7 +32,9 @@ public class JDBCCrudOperation {
 		}
 		con.close();
 	}
-	public static void createTable() throws SQLException {
+	public static void createTable() throws Exception {
+		System.out.println("Enter Table Name");
+		String tableName=br.readLine();
 		String tablename = "create table "+tableName+"(Rollno int Primary key,name varchar(50),C Varchar(50),Cplus varchar(50),Java Varchar(50),DBMS varchar(50))";
 	Connection con = DriverManager.getConnection(url1, username, pass);
 		PreparedStatement ps = con.prepareStatement(tablename);
@@ -43,7 +47,7 @@ public class JDBCCrudOperation {
 }                  /* Insert Values */
 
 	public static void insertValue() throws Exception {
-		BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
+		
 		System.out.println("<----------- Enter Roll no ------->");
 		int rollno = Integer.parseInt(br.readLine());
 		System.out.println("<------------ Enter Name --------->");
@@ -56,6 +60,8 @@ public class JDBCCrudOperation {
 		String Java = br.readLine();
 		System.out.println("<---------- Enter Marks DBMS ---------->");
 		String DBMS = br.readLine();
+		System.out.println("Enter Table Name");
+		String tableName=br.readLine();
 		String insertValues = "Insert into "+tableName+" values(?,?,?,?,?,?)";
 		Connection con = DriverManager.getConnection(url1, username, pass);
 		PreparedStatement ps = con.prepareStatement(insertValues);
@@ -73,7 +79,9 @@ public class JDBCCrudOperation {
 		}
 	}
 
-	public static void updateValues() throws SQLException {
+	public static void updateValues() throws Exception {
+		System.out.println("Enter Table Name");
+		String tableName=br.readLine();
 		String updateValue = "update "+tableName+" set C =? where name=?";
 		Scanner sc = new Scanner(System.in);
 		System.err.println("<--------------- Enter name ------------>");
@@ -92,7 +100,9 @@ public class JDBCCrudOperation {
 		}
 	}
 
-	public static void deleteValues() throws SQLException {
+	public static void deleteValues() throws Exception {
+		System.out.println("Enter Table Name");
+		String tableName=br.readLine();
 		String deleteValue = "delete from "+tableName+" where name=?";
 		Scanner sc = new Scanner(System.in);
 		System.err.println("<--------------- Enter Name ------------>");
@@ -108,7 +118,9 @@ public class JDBCCrudOperation {
 		}
 	}
 
-	public static void fetchTable() throws SQLException {
+	public static void fetchTable() throws Exception {
+		System.out.println("Enter Table Name");
+		String tableName=br.readLine();
 		String fetchTable = "Select * from "+tableName;
 		Connection con = DriverManager.getConnection(url1, username, pass);
 		PreparedStatement ps = con.prepareStatement(fetchTable);
