@@ -15,7 +15,7 @@ public class CreateDatabase {
 		String dbname=sc.nextLine();
 		Class.forName("com.mysql.cj.jdbc.Driver");
 		String url="jdbc:mysql://localhost:3306/";
-		String username="root";	
+		String username="root";	  
 		String pass="root";
 		String query="create database "+dbname;
 		

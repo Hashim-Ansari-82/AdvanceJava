@@ -144,7 +144,7 @@ public class JDBCCrudOperation {
 			System.out.println("\n<---------------------- Choose any option ------------------>\n");
 			System.out  
 					.println("\n1. Create Database  \t2. Create Table \t3. Insert Values \n\n"
-							+ "4. Update Values  \t5. Delete Values  \t6. Fetch Tablel\n");
+							+ "4. Update Values  \t5. Delete Values  \t6. Fetch Table\n");
 			System.out.println("                        7.Exit Button");
 			choice = sc.nextInt();
 			switch (choice) {

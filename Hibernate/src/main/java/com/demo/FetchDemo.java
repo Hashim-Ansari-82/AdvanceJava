@@ -4,8 +4,8 @@ import org.hibernate.Session;
 import org.hibernate.SessionFactory;
 import org.hibernate.cfg.Configuration;
 
-import com.test.Certificate;
-import com.test.Student;
+import com.cache.Certificate;
+import com.cache.Student;
 
 
 public class FetchDemo {

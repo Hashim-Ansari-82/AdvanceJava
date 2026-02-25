@@ -8,7 +8,7 @@ import org.hibernate.SessionFactory;
 import org.hibernate.cfg.Configuration;
 import org.hibernate.criterion.Restrictions;
 
-import com.test.Student;
+import com.cache.Student;
 
 public class FetchByCriteria {
 

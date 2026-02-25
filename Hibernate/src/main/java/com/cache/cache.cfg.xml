@@ -15,7 +15,7 @@
 	<property name="format_sql">true</property>
 	<property name="cache.use.second_level_cache">true</property>
     <property name="cache.region.factory_class">org.hibernate.cache.ehcache.internal.EhcacheRegionFactory</property>
-	<mapping class="com.test.Student"/>
-	<mapping class="com.test.Certificate"/>
+	<mapping class="com.cache.Student"/>
+	<mapping class="com.cache.Certificate"/>
 	</session-factory>
 	</hibernate-configuration>

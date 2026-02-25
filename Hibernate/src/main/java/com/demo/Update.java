@@ -5,7 +5,7 @@ import org.hibernate.SessionFactory;
 import org.hibernate.Transaction;
 import org.hibernate.cfg.Configuration;
 
-import com.test.Certificate;
+import com.cache.Certificate;
 
 public class Update {
      public static void main(String[] args) {

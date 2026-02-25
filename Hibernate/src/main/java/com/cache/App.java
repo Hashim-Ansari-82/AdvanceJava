@@ -1,4 +1,4 @@
-package com.test;
+package com.cache;
 
 import java.io.FileInputStream;
 import java.io.IOException;
@@ -14,7 +14,7 @@ public class App {
     public static void main(String[] args) throws IOException {
     	
         Configuration cfg = new Configuration();
-        cfg.configure("com/test/test.cfg.xml");
+        cfg.configure("com/cache/cache.cfg.xml");
         SessionFactory factory = cfg.buildSessionFactory(); 
         Session session = factory.openSession();
         Transaction tx = session.beginTransaction();
