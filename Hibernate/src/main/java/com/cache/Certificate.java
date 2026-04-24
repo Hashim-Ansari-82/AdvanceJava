@@ -9,7 +9,6 @@ import jakarta.persistence.*;
 public class Certificate {
 
 	@Id
-	@GeneratedValue(strategy = GenerationType.IDENTITY)
 	private int serialId;
 	private int certiNo;
 	private String certiName;

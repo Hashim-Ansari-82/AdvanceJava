@@ -84,6 +84,7 @@ public class App {
 		/* Certificate Class Object */
         
         Certificate c1=new Certificate();
+        c1.setSerialId(82);
         c1.setStudentName("Suhaib Ansari");
         c1.setCertiNo(7);
         c1.setDate(new Date());
@@ -95,6 +96,7 @@ public class App {
         c1.setImage(image);
         
         Certificate c2=new Certificate();
+        c2.setSerialId(83);
         c2.setStudentName("Hashim Ansari");
         c2.setCertiNo(8);
         c2.setDate(new Date());
@@ -106,6 +108,7 @@ public class App {
         c2.setImage(image1);
         
         Certificate c3=new Certificate();
+        c3.setSerialId(84);
         c3.setStudentName("Salim Ansari");
         c3.setCertiNo(9);
         c3.setDate(new Date());
@@ -117,6 +120,7 @@ public class App {
         c3.setImage(image2);
         
         Certificate c4=new Certificate();
+        c4.setSerialId(85);
         c4.setStudentName("Asim Ansari");
         c4.setCertiNo(10);
         c4.setDate(new Date());
@@ -128,6 +132,7 @@ public class App {
         c4.setImage(image3);
         
         Certificate c5=new Certificate();
+        c5.setSerialId(86);
         c5.setStudentName("Qasim Ansari");
         c5.setCertiNo(11);
         c5.setDate(new Date());
@@ -139,6 +144,7 @@ public class App {
         c5.setImage(image4);
         
         Certificate c6=new Certificate();
+        c6.setSerialId(87);
         c6.setStudentName("Tahir Ansari");
         c6.setCertiNo(12);
         c6.setDate(new Date());

@@ -1,4 +1,4 @@
-package com.demo;
+package com.demo1st;
 
 import java.util.List;
 
@@ -15,7 +15,7 @@ public class FetchByCriteria {
 	public static void main(String[] args) {
 		
 
-		SessionFactory factory = new Configuration().configure("com/test/test.cfg.xml").buildSessionFactory();
+		SessionFactory factory = new Configuration().configure("com/cache/cache.cfg.xml").buildSessionFactory();
 		Session session = factory.openSession();
 		
 		Criteria criteria = session.createCriteria(Student.class);

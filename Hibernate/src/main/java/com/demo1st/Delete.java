@@ -1,4 +1,4 @@
-package com.demo;
+package com.demo1st;
 
 import org.hibernate.Session;
 import org.hibernate.Transaction;
@@ -10,7 +10,7 @@ public class Delete {
 
 	public static void main(String[] args) {
 		
-		Session session = new Configuration().configure("com/test/test.cfg.xml").buildSessionFactory().openSession();
+		Session session = new Configuration().configure("com/demo/hiber.cfg.xml").buildSessionFactory().openSession();
 		Transaction tx = session.beginTransaction();
 		
 		Student s=session.get(Student.class,5);

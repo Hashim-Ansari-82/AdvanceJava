@@ -1,4 +1,4 @@
-package com.demo;
+package com.demo1st;
 
 import java.io.BufferedReader;
 import java.io.InputStreamReader;
@@ -28,7 +28,7 @@ public class HibernateCrudOperation {
 	    System.out.println("Enter Student gender");
 	    String gender=br.readLine();
 	    System.out.println("\n<--------- Project Started ----------->\n");
-		SessionFactory factory = new Configuration().configure("com/demo/hiber.cfg.xml").buildSessionFactory();
+		SessionFactory factory = new Configuration().configure("com/demo1st/hiber.cfg.xml").buildSessionFactory();
 	   	Session session = factory.openSession();
 		Transaction tx = session.beginTransaction();
 		
@@ -51,7 +51,7 @@ public class HibernateCrudOperation {
 	 
 	static void fetch() {
 	    System.out.println("\n<--------- Project Started ----------->\n");
-		SessionFactory factory = new Configuration().configure("com/demo/hiber.cfg.xml").buildSessionFactory();
+		SessionFactory factory = new Configuration().configure("com/demo1st/hiber.cfg.xml").buildSessionFactory();
 	   	Session session = factory.openSession();
 	   	System.out.println();
 	   	
@@ -68,7 +68,7 @@ public class HibernateCrudOperation {
 		 int id=Integer.parseInt(br.readLine());
 		 
 		 System.out.println("\n<--------- Project Started ----------->\n");
-			Session session = new Configuration().configure("com/demo/hiber.cfg.xml").buildSessionFactory().openSession();
+			Session session = new Configuration().configure("com/demo1st/hiber.cfg.xml").buildSessionFactory().openSession();
 			Transaction tx = session.beginTransaction(); 
 			
 			StudentDetail s=session.get(StudentDetail.class,id);
@@ -196,7 +196,7 @@ public class HibernateCrudOperation {
 	   int id=Integer.parseInt(br.readLine());
 	   
 	    System.out.println("\n<--------- Project Started ----------->\n");
-		Session session = new Configuration().configure("com/demo/hiber.cfg.xml").buildSessionFactory().openSession();
+		Session session = new Configuration().configure("com/demo1st/hiber.cfg.xml").buildSessionFactory().openSession();
 		Transaction tx = session.beginTransaction();
 		
 		StudentDetail s=session.get(StudentDetail.class,id);
