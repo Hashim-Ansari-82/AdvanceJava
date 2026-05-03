@@ -11,7 +11,10 @@
 			<property name="dialect">org.hibernate.dialect.MySQL8Dialect</property>
 			<property name="hbm2ddl.auto">update</property>
 			<property name="show_sql">true</property>
-			<mapping class="com.map.Question"/>
-			<mapping class="com.map.Answer"/>
+			<property name="format_sql">true</property>
+			<mapping class="com.map.Father"/>
+			<mapping class="com.map.Son"/>
+			<mapping class="com.map.College"/>
+			<mapping class="com.map.Student"/>
 		</session-factory>
 	</hibernate-configuration>

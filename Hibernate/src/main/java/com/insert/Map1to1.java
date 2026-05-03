@@ -5,8 +5,8 @@ import org.hibernate.SessionFactory;
 import org.hibernate.Transaction;
 import org.hibernate.cfg.Configuration;
 
-import com.entity.Answer;
-import com.entity.Question;
+import com.map.Answer;
+import com.map.Question;
 
 public class Map1to1 {
 

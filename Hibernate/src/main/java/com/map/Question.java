@@ -1,4 +1,4 @@
-package com.entity;
+package com.map;
 
 import jakarta.persistence.Entity;
 import jakarta.persistence.Id;
@@ -12,12 +12,12 @@ import lombok.NoArgsConstructor;
 @Data
 @AllArgsConstructor
 @NoArgsConstructor
-public class Answer {
+public class Question {
 
 	@Id
-	private int ansId;
-	private String answer;
-	@OneToOne(mappedBy = "answer")
-	@JoinColumn(name="quesId") 
-	Question ques;
+	private int QuesId;
+	private String question;
+	@OneToOne
+	@JoinColumn(name="ansId")
+	Answer answer;
 }
