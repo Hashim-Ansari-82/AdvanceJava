@@ -3,9 +3,10 @@ package com.demo2nd;
 import jakarta.persistence.Column;
 import jakarta.persistence.Entity;
 import jakarta.persistence.Id;
+import lombok.Data;
 
 @Entity
-public class HR {
+public @Data class HR {
 
 	@Id
 	@Column(name="HR_Id")
@@ -47,13 +48,13 @@ public class HR {
 		Department = department;
 		Address = address;
 	}
+	public HR() {
+		super();
+		// TODO Auto-generated constructor stub
+	}
 	@Override
 	public String toString() {
 		return "HR [id=" + id + ", name=" + name + ", Department=" + Department + ", Address=" + Address + "]";
 	}
-	public HR() {
-		super();
-	}
-	
 	
 }
