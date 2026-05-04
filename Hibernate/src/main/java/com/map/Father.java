@@ -2,6 +2,7 @@ package com.map;
 
 import java.util.List;
 
+import jakarta.persistence.CascadeType;
 import jakarta.persistence.Entity;
 import jakarta.persistence.FetchType;
 import jakarta.persistence.Id;
@@ -21,6 +22,6 @@ public class Father {
 	@Id
 	 private int Father_Id;
 	private String Father_Name;
-	@OneToMany(mappedBy = "father",fetch = FetchType.EAGER)
+	@OneToMany(mappedBy = "father",fetch = FetchType.EAGER,cascade = CascadeType.ALL)
 	private List<Son> son;
 }

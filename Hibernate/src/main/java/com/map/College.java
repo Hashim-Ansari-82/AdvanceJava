@@ -2,10 +2,10 @@ package com.map;
 
 import java.util.List;
 
+import jakarta.persistence.CascadeType;
 import jakarta.persistence.Column;
 import jakarta.persistence.Entity;
 import jakarta.persistence.Id;
-import jakarta.persistence.JoinColumn;
 import jakarta.persistence.OneToMany;
 import lombok.AllArgsConstructor;
 import lombok.Data;
@@ -26,6 +26,6 @@ public class College {
 	private String name; 
 	@Column(name="School_Address")
 	private String address;
-	@OneToMany(mappedBy = "college")
+	@OneToMany(mappedBy = "college",cascade = CascadeType.ALL)
 	private List<Student> student;
 }

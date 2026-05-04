@@ -18,7 +18,7 @@ public class Map1ToMany {
 	public static void main(String[] args) {
 		
 		System.out.println("Project Started .... !");
-		Configuration cfg=new Configuration().configure("com/xml/map1ToMany.cfg.xml");
+		Configuration cfg=new Configuration().configure("com/xml/1ToMany.cfg.xml");
         SessionFactory factory = cfg.buildSessionFactory();
         Session session = factory.openSession();
         Transaction tx = session.beginTransaction(); 
@@ -66,12 +66,6 @@ public class Map1ToMany {
         list.add(son6);
 
         session.persist(father);
-        session.persist(son1);
-        session.persist(son2);
-        session.persist(son3);
-        session.persist(son4);
-        session.persist(son5);
-        session.persist(son6);
         
         for(Son son: list) {
         	son.setFather(father);
@@ -116,11 +110,6 @@ public class Map1ToMany {
        list1.add(student5);
        
        session.persist(college);
-       session.persist(student1);
-       session.persist(student2);
-       session.persist(student3);
-       session.persist(student4);
-       session.persist(student5);
        
        for(Student s:list1) {
     	   s.setCollege(college);

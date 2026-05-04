@@ -10,7 +10,7 @@ import org.hibernate.cfg.Configuration;
 
 import com.entity.Animal;
 
-public class InsertHR 
+public class InsertAnimal 
 {
     public static void main( String[] args )throws Exception {
     	

@@ -1,0 +1,12 @@
+<hibernate-mapping>
+
+	<class name="com.mapping.xml.Client" table="Client">
+
+		<id name="id" column="Client_Id">
+			<generator class="increment" />
+		</id>
+		<property name="name" column="Client_Name" type="string" />
+		<property name="address" column="Client_Address" type="string" />
+		<property name="number" column="Client_No" type="long" />
+	</class>
+</hibernate-mapping>
