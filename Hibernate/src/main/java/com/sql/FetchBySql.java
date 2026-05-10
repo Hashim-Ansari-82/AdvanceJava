@@ -15,7 +15,7 @@ public class FetchBySql {
 	public static void main(String[] args) {
 		
 		System.out.println("Project Started");
-		SessionFactory factory = new Configuration().configure("com/xml/hql.cfg.xml").buildSessionFactory();
+		SessionFactory factory = new Configuration().configure("hql.cfg.xml").buildSessionFactory();
 		Session session = factory.openSession();
 		Transaction tx = session.beginTransaction();
 		

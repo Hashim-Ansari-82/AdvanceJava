@@ -30,7 +30,7 @@ public class VehicleMain {
 		
     	System.out.println("Project Started....!");
 		
-		Configuration cfg=new Configuration().configure("com/xml/vehicle.cfg.xml");
+		Configuration cfg=new Configuration().configure("vehicle.cfg.xml");
 		SessionFactory factory = cfg.buildSessionFactory();
 		Session session = factory.openSession();
 		Transaction tx = session.beginTransaction();

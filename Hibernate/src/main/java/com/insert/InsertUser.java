@@ -28,7 +28,7 @@ public class InsertUser {
 		int age = Integer.parseInt(br.readLine());
 		
 		System.out.println("Project Started....!");
-		Configuration cfg=new Configuration().configure("com/xml/user.cfg.xml");
+		Configuration cfg=new Configuration().configure("user.cfg.xml");
 		SessionFactory factory = cfg.buildSessionFactory();
 		Session session = factory.openSession();
 		Transaction tx = session.beginTransaction();

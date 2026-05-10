@@ -14,7 +14,7 @@ public class FetchByCriteria {
 	@SuppressWarnings("deprecation")
 	public static void main(String[] args) {
 		
-		Session session = new Configuration().configure("com/xml/client.cfg.xml").buildSessionFactory().openSession();
+		Session session = new Configuration().configure("client.cfg.xml").buildSessionFactory().openSession();
 		Criteria criteria = session.createCriteria(Client.class);
 		
 		criteria.add(Restrictions.between("id", 13,19));

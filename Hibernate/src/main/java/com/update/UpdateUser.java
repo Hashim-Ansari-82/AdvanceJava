@@ -24,7 +24,7 @@ public class UpdateUser {
 		System.out.println("Project Started .... !");
 		Thread.sleep(2500);
 		
-		Configuration configure = new Configuration().configure("com/xml/user.cfg.xml");
+		Configuration configure = new Configuration().configure("user.cfg.xml");
 		SessionFactory factory = configure.buildSessionFactory();
 		Session session = factory.openSession();
 		Transaction tx = session.beginTransaction();

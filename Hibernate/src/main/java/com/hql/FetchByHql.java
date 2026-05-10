@@ -14,7 +14,7 @@ public class FetchByHql {
 	public static void main(String[] args) throws IOException {
 		
 		System.out.println("Project Started....!");
-		Configuration cfg = new Configuration().configure("com/xml/hql.cfg.xml");
+		Configuration cfg = new Configuration().configure("hql.cfg.xml");
 		SessionFactory factory = cfg.buildSessionFactory();
 		
 		Session session = factory.openSession();

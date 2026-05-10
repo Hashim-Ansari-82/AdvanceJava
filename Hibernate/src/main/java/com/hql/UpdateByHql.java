@@ -21,7 +21,7 @@ public class UpdateByHql {
 		String name = br.readLine();
 		System.out.println("Project Started....!");
 		
-		Configuration cfg = new Configuration().configure("com/xml/hql.cfg.xml");
+		Configuration cfg = new Configuration().configure("hql.cfg.xml");
 		SessionFactory factory = cfg.buildSessionFactory();
 		Session session = factory.openSession();
 		Transaction tx = session.beginTransaction();

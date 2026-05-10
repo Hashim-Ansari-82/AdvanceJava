@@ -12,7 +12,7 @@ public class FetchHR {
 
 	public static void main(String[] args) {
 		
-		Configuration configure = new Configuration().configure("com/xml/hiber.cfg.xml");
+		Configuration configure = new Configuration().configure("hiber.cfg.xml");
 		SessionFactory factory = configure.buildSessionFactory();
 		Session session = factory.openSession();
 		 

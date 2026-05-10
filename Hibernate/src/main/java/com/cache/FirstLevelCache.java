@@ -10,7 +10,7 @@ public class FirstLevelCache {
 
 	public static void main(String[] args) {
 
-		SessionFactory factory = new Configuration().configure("com/xml/cache.cfg.xml").buildSessionFactory();
+		SessionFactory factory = new Configuration().configure("cache.cfg.xml").buildSessionFactory();
 		Session session = factory.openSession();
 
 		Student student = session.get(Student.class, 1);

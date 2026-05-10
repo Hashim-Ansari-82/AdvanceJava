@@ -10,7 +10,7 @@ public class SecondLevelCache {
 
 		public static void main(String[] args) {
 
-			SessionFactory factory = new Configuration().configure("com/xml/cache.cfg.xml").buildSessionFactory();
+			SessionFactory factory = new Configuration().configure("cache.cfg.xml").buildSessionFactory();
 			
 			Session session1 = factory.openSession();
 			Student student1 = session1.get(Student.class, 1);

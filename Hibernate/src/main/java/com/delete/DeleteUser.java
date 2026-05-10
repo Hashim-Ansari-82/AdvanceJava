@@ -12,7 +12,7 @@ public class DeleteUser {
 	public static void main(String[] args) throws InterruptedException {
 		System.out.println("Project Started .... !");
 		Thread.sleep(5000);
-		Configuration configure = new Configuration().configure("com/xml/user.cfg.xml");
+		Configuration configure = new Configuration().configure("user.cfg.xml");
 		SessionFactory factory = configure.buildSessionFactory();
 		Session session = factory.openSession();
 		Transaction tx = session.beginTransaction();

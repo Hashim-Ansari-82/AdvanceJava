@@ -1,8 +1,5 @@
 package com.sql;
 
-import java.io.BufferedReader;
-import java.io.InputStreamReader;
-
 import org.hibernate.Session;
 import org.hibernate.SessionFactory;
 import org.hibernate.Transaction;
@@ -13,7 +10,7 @@ public class UpdateBySql {
 
 	public static void main(String[] args) {
 		
-		SessionFactory factory = new Configuration().configure("com/xml/hql.cfg.xml").buildSessionFactory();
+		SessionFactory factory = new Configuration().configure("hql.cfg.xml").buildSessionFactory();
 		Session session = factory.openSession();
 		Transaction tx = session.beginTransaction();
 		

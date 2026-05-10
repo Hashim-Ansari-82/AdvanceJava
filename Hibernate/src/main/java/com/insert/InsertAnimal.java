@@ -22,7 +22,7 @@ public class InsertAnimal
     	System.out.println("Enter Animal leg");
     	String leg=br.readLine();
     	System.out.println("Project Started....!");
-    	Configuration cfg=new Configuration().configure("com/xml/hiber.cfg.xml");
+    	Configuration cfg=new Configuration().configure("hiber.cfg.xml");
         SessionFactory factory = cfg.buildSessionFactory();
        Session session = factory.openSession();
        Transaction tx = session.beginTransaction(); 

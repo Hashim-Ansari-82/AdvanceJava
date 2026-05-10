@@ -13,7 +13,7 @@ public class InnerJoin {
 
 	public static void main(String[] args) {
 		
-		Configuration cfg = new Configuration().configure("com/xml/1ToMany.cfg.xml");
+		Configuration cfg = new Configuration().configure("1ToMany.cfg.xml");
 		SessionFactory factory = cfg.buildSessionFactory();
 		Session session = factory.openSession();
 		Transaction tx = session.beginTransaction();

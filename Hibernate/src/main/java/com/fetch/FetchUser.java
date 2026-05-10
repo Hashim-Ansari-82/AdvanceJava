@@ -12,7 +12,7 @@ public class FetchUser {
 
 	public static void main(String[] args) {
 		 
-		Configuration cfg = new Configuration().configure("com/xml/user.cfg.xml");
+		Configuration cfg = new Configuration().configure("user.cfg.xml");
 		SessionFactory factory = cfg.buildSessionFactory();
 		Session session = factory.openSession();
 		

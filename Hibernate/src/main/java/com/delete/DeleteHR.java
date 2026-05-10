@@ -13,7 +13,7 @@ public class DeleteHR {
 		
 		System.out.println("Project Started .... !");
 		Thread.sleep(5000);
-		Configuration configure = new Configuration().configure("com/xml/hiber.cfg.xml");
+		Configuration configure = new Configuration().configure("hiber.cfg.xml");
 		SessionFactory factory = configure.buildSessionFactory();
 		Session session = factory.openSession();
 		Transaction tx = session.beginTransaction();

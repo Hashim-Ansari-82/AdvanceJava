@@ -24,7 +24,7 @@ public class InsertClient {
 		System.out.println("Enter Client Number");
 		long number = Long.parseLong(br.readLine());
 		
-		Configuration cfg = new Configuration().configure("com/xml/client.cfg.xml");
+		Configuration cfg = new Configuration().configure("client.cfg.xml");
 		SessionFactory factory =cfg.buildSessionFactory();
 		
 		Client c=new Client();

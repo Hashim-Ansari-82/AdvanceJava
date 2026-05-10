@@ -16,7 +16,7 @@ public class ManyToMany {
 	public static void main(String[] args) {
 		
 		System.out.println("Project Started .... !");
-		Configuration cfg=new Configuration().configure("com/xml/manyToMany.cfg.xml");
+		Configuration cfg=new Configuration().configure("manyToMany.cfg.xml");
         SessionFactory factory = cfg.buildSessionFactory();
         Session session = factory.openSession();
         Transaction tx = session.beginTransaction();

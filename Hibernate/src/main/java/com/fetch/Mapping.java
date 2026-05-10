@@ -10,7 +10,7 @@ public class Mapping {
 
 	public static void main(String[] args) {
 		System.out.println("Project Started .... !");
-		Configuration cfg=new Configuration().configure("com/xml/map1ToMany.cfg.xml");
+		Configuration cfg=new Configuration().configure("map1ToMany.cfg.xml");
         SessionFactory factory = cfg.buildSessionFactory();
         Session session = factory.openSession();
         

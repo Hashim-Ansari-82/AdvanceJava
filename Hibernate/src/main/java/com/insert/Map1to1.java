@@ -13,7 +13,7 @@ public class Map1to1 {
 	public static void main(String[] args) {
 		
 		System.out.println("Project Started .... !");
-		Configuration cfg=new Configuration().configure("com/xml/1To1.cfg.xml");
+		Configuration cfg=new Configuration().configure("1To1.cfg.xml");
         SessionFactory factory = cfg.buildSessionFactory();
        Session session = factory.openSession();
        Transaction tx = session.beginTransaction(); 

@@ -14,7 +14,7 @@ public class Embed {
 		
 		System.out.println("Project Started .... !");
 		Thread.sleep(5000);
-		Configuration configure = new Configuration().configure("com/xml/embed.cfg.xml");
+		Configuration configure = new Configuration().configure("embed.cfg.xml");
 		SessionFactory factory = configure.buildSessionFactory();
 		Session session = factory.openSession();
 		Transaction tx = session.beginTransaction();

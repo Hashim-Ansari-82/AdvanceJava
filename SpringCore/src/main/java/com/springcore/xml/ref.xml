@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xmlns:context="http://www.springframework.org/schema/context"
+	xmlns:p="http://www.springframework.org/schema/p"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd
+						http://www.springframework.org/schema/context http://www.springframework.org/schema/context/spring-context.xsd">
+
+	 <bean class="com.springcore.xmlentity.Engine" name="engine">
+		 <property name="engName" value="Turbo engine"/>
+		 <property name="quality" value="Famous Engine"/>
+	 </bean>
+	 
+	 <bean class="com.springcore.xmlentity.Car" name="car">
+		 <property name="number" value="UP 51 NH 5673"/>
+		 <property name="name" value="Range Rover"/>
+		 <property name="price" value="5 Crore"/>
+		<!-- <property name="engine"><ref  bean="engine"/></property>-->
+		 <property name="engine" ref  ="engine"/>
+	 </bean>
+	 
+</beans>

@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xmlns:context="http://www.springframework.org/schema/context"
+	xmlns:p="http://www.springframework.org/schema/p"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd
+						http://www.springframework.org/schema/context http://www.springframework.org/schema/context/spring-context.xsd">
+
+	<!--Student class Bean-->
+	<bean class="com.springcore.xmlentity.Animal" name="animal1">
+		<property name="name">
+			<value>Lion</value>
+		</property>
+		<property name="foot">
+			<value>4</value>
+		</property>
+		<property name="color">
+			<value>Red</value>
+		</property>
+		<property name="list">
+			<list>
+				<value>Dog</value>
+				<value>Cat</value>
+				<value>Rat</value>
+				<value>Hen</value>
+				<value>Goat</value>
+			</list>
+		</property>
+		<property name="set">
+			<set>
+				<value>32</value>
+				<value>43</value>
+				<value>54</value>
+				<value>65</value>
+				<value>76</value>
+			</set>
+		</property>
+		<property name="props">
+			<props>
+				<prop key="Name">Hippopotamous</prop>
+				<prop key="Id">4235</prop>
+				<prop key="jungle">Amazon Jungle</prop>
+			</props>
+		</property>
+		<property name="map">
+			<map>
+				<entry key="12" value="Monkey" />
+				<entry key="54" value="Donkey" />
+				<entry key="43" value="Hen" />
+			</map>
+		</property>
+	</bean>
+
+
+</beans>
