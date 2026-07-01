@@ -1,0 +1,8 @@
+@charset "UTF-8";
+
+body {
+	background-image: url('../image/h.jpg');
+	background-size: cover;
+	background-repeat: no-repeat;
+	background-position: center 20%;
+}

@@ -6,19 +6,18 @@ import org.springframework.context.support.ClassPathXmlApplicationContext;
 public class App {
 
 	public static void main(String[] args) {
-		
-		AbstractApplicationContext context=
-			new	ClassPathXmlApplicationContext("com/springcore/lifecycle/config.xml");
-		
+
+		AbstractApplicationContext context = new ClassPathXmlApplicationContext("lifecycle.xml");
+
 		Samosa samosa = context.getBean(Samosa.class);
 		System.out.println(samosa);
-		
+
 		context.registerShutdownHook();
-		
-	 Pepsi pepsi = context.getBean(Pepsi.class);
-	 System.out.println(pepsi);
-	 
-	 Chutney chutney = context.getBean(Chutney.class);
-	 System.out.println(chutney);
+
+		Pepsi pepsi = context.getBean(Pepsi.class);
+		System.out.println(pepsi);
+
+		Chutney chutney = context.getBean(Chutney.class);
+		System.out.println(chutney);
 	}
 }

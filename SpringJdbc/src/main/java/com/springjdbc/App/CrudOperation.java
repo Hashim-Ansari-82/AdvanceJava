@@ -18,6 +18,7 @@ public class CrudOperation {
 
 	public static BufferedReader br = new BufferedReader(new InputStreamReader(System.in));;
 	static VehicleDao dao;
+	static int choice;
 
 	/* Insert Operation */
 
@@ -119,30 +120,31 @@ public class CrudOperation {
 					/* Menu */
 	
 	public static void menu() {
+		do {
 		br = new BufferedReader(new InputStreamReader(System.in));
 		System.out.println("	   Choose Any Opetaion");
 		System.out.println("1. Insert" + "			2.Update\n");
 		System.out.println("3. Delete" + "			4.Fetch\n");
 		System.out.println("5. Get Vehicle                  6.Exit");
 		try {
-			int choice = Integer.parseInt(br.readLine());
+			choice = Integer.parseInt(br.readLine());
 			
 			switch (choice) {
 				case 1:
 					insert();
-					menu();
+					break;
 				case 2:
 					update();
-					menu();
+					break;
 				case 3:
 					delete();
-					menu();
+					break;
 				case 4:
 					fetch();
-					menu();
+					break;
 				case 5:
 					getVehicle();
-					menu();
+					break;
              default : 
 			System.out.println("Thanks for visiting.....!");
 			System.exit(choice);
@@ -150,6 +152,8 @@ public class CrudOperation {
 		} catch (Exception e) {
 			e.printStackTrace();
 		}
+		}
+		while(choice<6);
 	}
 
 	public static void main(String[] args) {
