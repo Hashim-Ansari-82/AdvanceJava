@@ -31,7 +31,7 @@ public class OneToMany {
 		
 		Animal animal3 = new Animal();
 		animal3.setName("Heron");
-		animal3.setFood("Fish");
+		animal3.setFood("Grass");
 		animal3.setForest(forest);
 		
 		Animal animal4 = new Animal();
@@ -53,7 +53,7 @@ public class OneToMany {
 		
 		forest.setId(4238);
 		forest.setForestName("Amazon Jungel");
-		forest.setAnimal(list);
+		forest.setAnimals(list);
 			
 		session.persist(forest);
 		tx.commit();

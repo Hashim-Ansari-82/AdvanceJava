@@ -2,6 +2,8 @@ package com.hibernate.onetomany;
 
 import java.util.List;
 
+import org.hibernate.annotations.BatchSize;
+
 import jakarta.persistence.CascadeType;
 import jakarta.persistence.Column;
 import jakarta.persistence.Entity;
@@ -18,6 +20,7 @@ import lombok.ToString;
 @Setter
 @AllArgsConstructor
 @NoArgsConstructor
+@ToString
 public class Forest {
 
 	@Id
@@ -25,6 +28,6 @@ public class Forest {
 	@Column(name = "Forest_Name")
 	private String forestName;
 	@OneToMany(cascade = CascadeType.ALL,mappedBy = "forest")
-	@ToString.Exclude
-	private List<Animal> animal;
+	@BatchSize(size=10)
+	private List<Animal> animals;
 }
