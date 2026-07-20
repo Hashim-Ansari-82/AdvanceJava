@@ -74,9 +74,12 @@
   <!--                                                                      -->
   <!--   useAcceptRanges     Should the Accept-Ranges header be included    -->
   <!--                       in responses where appropriate? [true]         -->
+<<<<<<< HEAD
   <!--                       Deprecated. This option will be removed        -->
   <!--                       without replacement in Tomcat 12 onwards where -->
   <!--                       it will effectively be hard coded to true.     -->
+=======
+>>>>>>> 99d440f25785920ae7674e56da661aa8a975bd8d
   <!--                                                                      -->
   <!--  For directory listing customization. Checks localXsltFile, then     -->
   <!--  globalXsltFile, then defaults to original behavior.                 -->
@@ -104,11 +107,19 @@
   <!--                       listings is enabled? [true]                    -->
   <!--                                                                      -->
   <!--   allowPartialPut     Should the server treat an HTTP PUT request    -->
+<<<<<<< HEAD
   <!--                       with a Content-Range header as a partial PUT?  -->
   <!--                       Note that while RFC 7231 clarified that such a -->
   <!--                       PUT with a Content-Range header field is a bad -->
   <!--                       request, RFC 9110 (which obsoletes RFC 7231)   -->
   <!--                       now allows partial PUT. [true]                 -->
+=======
+  <!--                       with a Range header as a partial PUT? Note     -->
+  <!--                       that while RFC 7233 clarified that Range       -->
+  <!--                       headers only valid for GET requests, RFC 9110  -->
+  <!--                       (which obsoletes RFC 7233) now allows partial  -->
+  <!--                       puts. [true]                                   -->
+>>>>>>> 99d440f25785920ae7674e56da661aa8a975bd8d
 
     <servlet>
         <servlet-name>default</servlet-name>
@@ -841,10 +852,13 @@
         <mime-type>video/x-msvideo</mime-type>
     </mime-mapping>
     <mime-mapping>
+<<<<<<< HEAD
         <extension>avif</extension>
         <mime-type>image/avif</mime-type>
     </mime-mapping>
     <mime-mapping>
+=======
+>>>>>>> 99d440f25785920ae7674e56da661aa8a975bd8d
         <extension>avx</extension>
         <mime-type>video/x-rad-screenplay</mime-type>
     </mime-mapping>
@@ -2149,10 +2163,13 @@
         <mime-type>text/plain</mime-type>
     </mime-mapping>
     <mime-mapping>
+<<<<<<< HEAD
         <extension>jxl</extension>
         <mime-type>image/jxl</mime-type>
     </mime-mapping>
     <mime-mapping>
+=======
+>>>>>>> 99d440f25785920ae7674e56da661aa8a975bd8d
         <extension>kar</extension>
         <mime-type>audio/midi</mime-type>
     </mime-mapping>
@@ -2321,6 +2338,7 @@
         <mime-type>audio/mpeg</mime-type>
     </mime-mapping>
     <mime-mapping>
+<<<<<<< HEAD
         <extension>m2t</extension>
         <mime-type>video/mp2t</mime-type>
     </mime-mapping>
@@ -2329,6 +2347,8 @@
         <mime-type>video/mp2t</mime-type>
     </mime-mapping>
     <mime-mapping>
+=======
+>>>>>>> 99d440f25785920ae7674e56da661aa8a975bd8d
         <extension>m2v</extension>
         <mime-type>video/mpeg</mime-type>
     </mime-mapping>
@@ -2698,7 +2718,11 @@
     </mime-mapping>
     <mime-mapping>
         <extension>mts</extension>
+<<<<<<< HEAD
         <mime-type>video/mp2t</mime-type>
+=======
+        <mime-type>model/vnd.mts</mime-type>
+>>>>>>> 99d440f25785920ae7674e56da661aa8a975bd8d
     </mime-mapping>
     <mime-mapping>
         <extension>mus</extension>
@@ -3738,6 +3762,7 @@
         <mime-type>application/x-sql</mime-type>
     </mime-mapping>
     <mime-mapping>
+<<<<<<< HEAD
         <extension>sqlite</extension>
         <mime-type>application/vnd.sqlite3</mime-type>
     </mime-mapping>
@@ -3746,6 +3771,8 @@
         <mime-type>application/vnd.sqlite3</mime-type>
     </mime-mapping>
     <mime-mapping>
+=======
+>>>>>>> 99d440f25785920ae7674e56da661aa8a975bd8d
         <extension>src</extension>
         <mime-type>application/x-wais-source</mime-type>
     </mime-mapping>
@@ -3994,10 +4021,13 @@
         <mime-type>application/x-msterminal</mime-type>
     </mime-mapping>
     <mime-mapping>
+<<<<<<< HEAD
         <extension>ts</extension>
         <mime-type>video/mp2t</mime-type>
     </mime-mapping>
     <mime-mapping>
+=======
+>>>>>>> 99d440f25785920ae7674e56da661aa8a975bd8d
         <extension>tsd</extension>
         <mime-type>application/timestamped-data</mime-type>
     </mime-mapping>

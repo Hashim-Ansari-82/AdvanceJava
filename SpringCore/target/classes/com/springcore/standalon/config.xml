@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xmlns:context="http://www.springframework.org/schema/context"
+	xmlns:p="http://www.springframework.org/schema/p"
+	xmlns:util="http://www.springframework.org/schema/util"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd
+						http://www.springframework.org/schema/util http://www.springframework.org/schema/util/spring-util.xsd">
+
+	<util:list list-class="java.util.ArrayList" id="list">
+		<value>Hashim Ansari</value>
+		<value>Srk Khan</value>
+		<value>Moiez Khan</value>
+		<value>Altmash Khan</value>
+	</util:list>
+
+	<util:map map-class="java.util.TreeMap" id="fees">
+		<entry key="Spring Boot">
+			<value>4000</value>
+		</entry>
+		<entry key="Java Programming">
+			<value>3000</value>
+		</entry>
+		<entry key="Python Programming">
+			<value>2500</value>
+		</entry>
+		<entry key="Spring Framework">
+			<value>2000</value>
+		</entry>
+	</util:map>
+
+	<util:properties id="DBConfig">
+		<prop key="Driver">com.mysql.cj.jdbc.Driver</prop>
+		<prop key="password">root</prop>
+		<prop key="username">root</prop>
+		<prop key="Id">53425</prop>
+	</util:properties>
+
+	<!--<bean class="com.springcore.standalon.Friends" name="feees" p:fees-ref="fees" p:friends-ref="list"/>-->
+
+	<bean class="com.springcore.standalon.Friends" name="friends">
+		<property name="friends" ref="list" />
+		<property name="fees" ref="fees" />
+		<property name="props" ref="DBConfig" />
+	</bean>
+
+
+</beans>

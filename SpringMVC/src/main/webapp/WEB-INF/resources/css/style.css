@@ -1,0 +1,16 @@
+@charset "UTF-8";
+
+body {
+	background-color: black !important;
+}
+
+h2 {
+	color: dark;
+}
+
+body {
+	background-image: url('../img/h.jpg');
+	background-size: cover;
+	background-repeat: no-repeat;
+	background-position: center 22%;
+}
