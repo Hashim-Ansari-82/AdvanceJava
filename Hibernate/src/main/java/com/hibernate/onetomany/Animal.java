@@ -1,10 +1,12 @@
 package com.hibernate.onetomany;
 
 import jakarta.persistence.Column;
+import jakarta.persistence.Embeddable;
 import jakarta.persistence.Entity;
 import jakarta.persistence.GeneratedValue;
 import jakarta.persistence.GenerationType;
 import jakarta.persistence.Id;
+import jakarta.persistence.JoinColumn;
 import jakarta.persistence.ManyToOne;
 import lombok.AllArgsConstructor;
 import lombok.Getter;
@@ -18,6 +20,7 @@ import lombok.ToString;
 @ToString
 @AllArgsConstructor
 @NoArgsConstructor
+@Embeddable
 public class Animal {
 
 	@Id
@@ -29,6 +32,7 @@ public class Animal {
 	@Column(name = "Animal_Food")
 	private String food;
 	@ManyToOne
+	@JoinColumn(name = "forest_id")
 	@ToString.Exclude
 	private Forest forest;
 }

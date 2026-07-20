@@ -17,7 +17,7 @@ public class Fetch {
 		String query="from Forest";
 		String query1="select distinct f from Forest f join fetch f.animals";
 		
-		List<Forest> list = session.createQuery(query,Forest.class).getResultList();
+		List<Forest> list = session.createQuery(query1,Forest.class).getResultList();
 		list.forEach(value ->{
 			System.out.println(value);
 			});

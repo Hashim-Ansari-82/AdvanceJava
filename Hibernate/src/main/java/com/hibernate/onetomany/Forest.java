@@ -22,12 +22,12 @@ import lombok.ToString;
 @NoArgsConstructor
 @ToString
 public class Forest {
-
+ 
 	@Id
 	private int id;
 	@Column(name = "Forest_Name")
 	private String forestName;
-	@OneToMany(cascade = CascadeType.ALL,mappedBy = "forest")
-	@BatchSize(size=10)
+	@OneToMany(cascade = CascadeType.ALL ,mappedBy = "forest")
+	@BatchSize(size = 3)
 	private List<Animal> animals;
 }
